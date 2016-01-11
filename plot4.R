@@ -20,7 +20,7 @@ hpc <- hpc %>%
 hpc$posix <- strptime(paste(hpc$Date, hpc$Time), "%d/%m/%Y %H:%M:%S")
 
 # Plot line graphs (plot 4)
-png("plot3.png", width=480, height=480, units="px")
+png("plot4.png", width=480, height=480, units="px")
 
 par(mfrow=c(2, 2))  # Create 2x2 grid for plots
 
@@ -33,8 +33,10 @@ plot(hpc$posix, hpc$Sub_metering_1, ylab='Energy sub metering',
      xlab="", type="l")
 lines(hpc$posix, hpc$Sub_metering_2, col="red")
 lines(hpc$posix, hpc$Sub_metering_3, col="blue")
-legend(3, legend=colnames(hpc)[7:9],
+legend("topright", legend=colnames(hpc)[7:9],
        col=c("black", "red", "blue"), lty='solid')
+# NOTE: Legend doesn't appear correctly in R window. However, it is resized
+# correctly in final png.
 
 plot(hpc$posix, hpc$Global_reactive_power, xlab="datetime",
      ylab="Global_reactive_power", type="l")
