@@ -22,5 +22,5 @@ hpc$posix <- strptime(paste(hpc$Date, hpc$Time), "%d/%m/%Y %H:%M:%S")
 # Plot line graph (plot 2)
 png("plot2.png", width=480, height=480, units="px")
 plot(hpc$posix, hpc$Global_active_power, ylab='Global Active Power (kilowatts)',
-     type="l")
+     xlab="", type="l")
 dev.off()

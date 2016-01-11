@@ -25,7 +25,7 @@ png("plot4.png", width=480, height=480, units="px")
 par(mfrow=c(2, 2))  # Create 2x2 grid for plots
 
 plot(hpc$posix, hpc$Global_active_power, ylab='Global Active Power (kilowatts)',
-     type="l")
+     xlab="", type="l")
 
 plot(hpc$posix, hpc$Voltage, xlab="datetime", ylab="Voltage", type="l")
 
