@@ -16,7 +16,7 @@ hpc <- hpc %>%
   mutate(asDate=as.Date(strptime(paste(Date, Time), "%d/%m/%Y %H:%M:%S"))) %>%
   filter(asDate >= dStart & asDate <= dEnd)
 
-# Plot histogram
+# Plot histogram (plot 1)
 hist(hpc$Global_active_power,
      col="red",
      xlab="Global Active Power (kilowatts)",
